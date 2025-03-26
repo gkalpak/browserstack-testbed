@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@gkalpak/browserstack-testbed",
+  "version": "0.0.1",
+  "description": "A testbed project to play around with BrowserStack stuff.",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "reset": "git add --all && (git commit -m BACKUP || git rev-parse --short HEAD) && git reset --hard v0.0.1-pristine && rm -rf node_modules/ && npm install",
+    "retag": "git tag --delete v0.0.1-pristine && git push --delete origin v0.0.1-pristine && git tag --message=\"v0.0.1-pristine\" v0.0.1-pristine && git push --tags origin",
+    "test": "node --print \"'ERROR: No tests (yet).'\" && exit 1"
+  },
+  "author": "George Kalpakas <kalpakas.g@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserstack-local": "^1.5.6",
+    "webdriverio": "^8.43.0"
+  }
+}
